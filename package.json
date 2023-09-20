@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "compile-sass": "node-sass ./main.scss ./style.css -w",
+    "live": "live-server"
+  },
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.67.0"
+  }
+}
