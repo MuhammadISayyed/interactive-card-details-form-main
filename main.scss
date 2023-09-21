@@ -57,8 +57,8 @@ input::placeholder {
 
 .card-front {
   background-image: url('./images/bg-card-front.png');
-  width: 447px;
-  height: 245px;
+  width: 28rem;
+  height: 15.5rem;
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--color-white);
@@ -104,8 +104,8 @@ input::placeholder {
 
 .card-back {
   background-image: url('./images/bg-card-back.png');
-  width: 447px;
-  height: 245px;
+  width: 28rem;
+  height: 15.5rem;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -180,4 +180,70 @@ input::placeholder {
   height: 3rem;
   color: var(--color-white);
   background-color: var(--color-violet-dark);
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards {
+    margin-top: 4rem;
+    gap: 0;
+  }
+
+  .cards-section {
+    background-size: cover;
+    height: 30vh;
+    flex-direction: column;
+  }
+
+  .card-front {
+    // margin: 0;
+    margin-top: -3.7rem;
+    margin-left: 1.5rem;
+    width: 16rem;
+    background-size: contain;
+    height: 8.5rem;
+    order: 2;
+
+    &__info {
+      gap: 2rem;
+    }
+
+    &__number {
+      font-size: 0.8rem;
+    }
+
+    &__logo {
+      width: 60px;
+    }
+
+    &__details {
+      gap: 0.7rem;
+      font-size: 0.6rem;
+    }
+
+    &__footer-name {
+      font-size: 0.5rem;
+      letter-spacing: 1px;
+    }
+  }
+
+  .card-back {
+    // background-size: contain;
+    width: 16rem;
+    background-size: contain;
+    margin: 0;
+    // height: fit-content;
+    height: 8.5rem;
+    order: 1;
+    margin-left: 4rem;
+
+    &__content {
+      font-size: 0.5rem;
+      padding-right: 2.5rem;
+    }
+  }
 }
