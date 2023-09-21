@@ -1,5 +1,7 @@
 :root {
   --color-white: hsl(0, 0%, 100%);
+  --color-gray: hsl(0, 0%, 85%);
+  --color-dark-violet: hsl(278, 68%, 11%);
   --spacing: 3px;
   --size-secondary: 0.8rem;
 }
@@ -15,6 +17,16 @@ body {
 input,
 label {
   display: block;
+}
+
+input {
+  margin-top: 1rem;
+}
+
+input::placeholder {
+  padding-left: 1rem;
+  font-family: 'Space Grotesk';
+  font-size: 1rem;
 }
 
 .container {
@@ -105,7 +117,7 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1.5rem;
+  gap: 2rem;
   &__privacy {
     display: flex;
     gap: 2rem;
@@ -123,6 +135,36 @@ label {
 
     &__fields {
       display: flex;
+      gap: 1.2rem;
     }
   }
+
+  &__input {
+    border: solid 1px var(--color-gray);
+    border-radius: 0.5rem;
+    height: 3rem;
+
+    &--primary {
+      width: 25rem;
+    }
+
+    &--secondary {
+      &--date {
+        width: 5rem;
+      }
+
+      &--cvc {
+        width: 11rem;
+      }
+    }
+  }
+}
+
+.submit {
+  text-decoration: none;
+  border: none;
+  width: 25rem;
+  height: 3rem;
+  color: var(--color-white);
+  background-color: var(--color-dark-violet);
 }

@@ -1,5 +1,7 @@
 :root {
   --color-white: hsl(0, 0%, 100%);
+  --color-gray: hsl(0, 0%, 85%);
+  --color-dark-violet: hsl(278, 68%, 11%);
   --spacing: 3px;
   --size-secondary: 0.8rem; }
 
@@ -12,6 +14,14 @@ body {
 input,
 label {
   display: block; }
+
+input {
+  margin-top: 1rem; }
+
+input::placeholder {
+  padding-left: 1rem;
+  font-family: 'Space Grotesk';
+  font-size: 1rem; }
 
 .container {
   display: grid;
@@ -82,7 +92,7 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1.5rem; }
+  gap: 2rem; }
   .card-form__privacy {
     display: flex;
     gap: 2rem;
@@ -94,4 +104,23 @@ label {
     .card-form__date__header {
       margin: 0; }
     .card-form__date__fields {
-      display: flex; }
+      display: flex;
+      gap: 1.2rem; }
+  .card-form__input {
+    border: solid 1px var(--color-gray);
+    border-radius: 0.5rem;
+    height: 3rem; }
+    .card-form__input--primary {
+      width: 25rem; }
+    .card-form__input--secondary--date {
+      width: 5rem; }
+    .card-form__input--secondary--cvc {
+      width: 11rem; }
+
+.submit {
+  text-decoration: none;
+  border: none;
+  width: 25rem;
+  height: 3rem;
+  color: var(--color-white);
+  background-color: var(--color-dark-violet); }
