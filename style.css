@@ -1,7 +1,8 @@
 :root {
   --color-white: hsl(0, 0%, 100%);
   --color-gray: hsl(0, 0%, 85%);
-  --color-dark-violet: hsl(278, 68%, 11%);
+  --color-violet-dark: hsl(278, 68%, 11%);
+  --color-gray-light: hsl(270, 3%, 87%);
   --spacing: 3px;
   --size-secondary: 0.8rem; }
 
@@ -9,6 +10,7 @@ html,
 body {
   height: 100%;
   margin: 0;
+  padding: 0;
   font-family: 'Space Grotesk', sans-serif; }
 
 input,
@@ -16,12 +18,13 @@ label {
   display: block; }
 
 input {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  font-family: 'Space Grotesk';
+  font-size: 1.2rem;
+  padding-left: 1rem; }
 
 input::placeholder {
-  padding-left: 1rem;
-  font-family: 'Space Grotesk';
-  font-size: 1rem; }
+  color: var(--color-gray-light); }
 
 .container {
   display: grid;
@@ -31,12 +34,17 @@ input::placeholder {
 .cards-section {
   grid-column: 1 2;
   background-image: url("./images/bg-main-desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   gap: 2rem; }
 
-.form-section {
-  grid-column: 2 -1; }
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 8rem; }
 
 .card-front {
   background-image: url("./images/bg-card-front.png");
@@ -44,7 +52,8 @@ input::placeholder {
   height: 245px;
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--color-white); }
+  color: var(--color-white);
+  margin-left: 6rem; }
   .card-front__info {
     margin: 1rem 1.7rem;
     display: flex;
@@ -60,7 +69,6 @@ input::placeholder {
   .card-front__number {
     font-weight: 400;
     font-size: 1.8rem;
-    text-align: center;
     letter-spacing: var(--spacing); }
   .card-front__footer {
     display: flex;
@@ -81,9 +89,13 @@ input::placeholder {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: var(--color-white); }
+  color: var(--color-white);
+  margin-left: 10rem; }
   .card-back__content {
     padding-right: 4rem; }
+
+.form-section {
+  grid-column: 2 -1; }
 
 .card-form {
   text-transform: uppercase;
@@ -111,11 +123,11 @@ input::placeholder {
     border-radius: 0.5rem;
     height: 3rem; }
     .card-form__input--primary {
-      width: 25rem; }
+      width: 24rem; }
     .card-form__input--secondary--date {
-      width: 5rem; }
+      width: 4rem; }
     .card-form__input--secondary--cvc {
-      width: 11rem; }
+      width: 10rem; }
 
 .submit {
   text-decoration: none;
@@ -123,4 +135,4 @@ input::placeholder {
   width: 25rem;
   height: 3rem;
   color: var(--color-white);
-  background-color: var(--color-dark-violet); }
+  background-color: var(--color-violet-dark); }
