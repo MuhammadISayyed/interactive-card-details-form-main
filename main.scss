@@ -12,6 +12,11 @@ body {
   font-family: 'Space Grotesk', sans-serif;
 }
 
+input,
+label {
+  display: block;
+}
+
 .container {
   display: grid;
   grid-template-columns: 3fr 7fr;
@@ -90,5 +95,34 @@ body {
 
   &__content {
     padding-right: 4rem;
+  }
+}
+
+.card-form {
+  text-transform: uppercase;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  &__privacy {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    &__header {
+      margin: 0;
+    }
+
+    &__fields {
+      display: flex;
+    }
   }
 }

@@ -9,6 +9,10 @@ body {
   margin: 0;
   font-family: 'Space Grotesk', sans-serif; }
 
+input,
+label {
+  display: block; }
+
 .container {
   display: grid;
   grid-template-columns: 3fr 7fr;
@@ -70,3 +74,24 @@ body {
   color: var(--color-white); }
   .card-back__content {
     padding-right: 4rem; }
+
+.card-form {
+  text-transform: uppercase;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem; }
+  .card-form__privacy {
+    display: flex;
+    gap: 2rem;
+    align-items: center; }
+  .card-form__date {
+    display: flex;
+    flex-direction: column;
+    gap: 0; }
+    .card-form__date__header {
+      margin: 0; }
+    .card-form__date__fields {
+      display: flex; }
