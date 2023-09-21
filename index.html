@@ -7,6 +7,12 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Interactive card details form</title>
   </head>
@@ -18,15 +24,19 @@
             <img class="card-front__logo" src="./images/card-logo.svg" alt="Card logo" />
             <div class="card-front__details">
               <span class="card-front__number">0000 0000 0000 0000</span>
-              <div>
-                <span>Jane Appleseed</span>
-                <span>00/00 000</span>
+              <div class="card-front__footer">
+                <span class="card-front__footer-name">Jane Appleseed</span>
+                <span>00/00</span>
               </div>
             </div>
           </div>
         </div>
 
-        <img src="./images/bg-card-back.png" alt="Back side of a bank card" />
+        <div class="card-back">
+          <div class="card-back__content">
+            <span>000</span>
+          </div>
+        </div>
       </div>
       <div class="form-section">
         <div>Cardholder Name e.g. Jane Appleseed</div>

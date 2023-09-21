@@ -1,8 +1,15 @@
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --spacing: 3px;
+  --size-secondary: 0.8rem;
+}
+
 html,
 body {
   // careful, because this could cause issues with responsiveness
   height: 100%;
   margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .container {
@@ -16,6 +23,7 @@ body {
   background-image: url('./images/bg-main-desktop.png');
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 .form-section {
@@ -24,22 +32,63 @@ body {
 
 .card-front {
   background-image: url('./images/bg-card-front.png');
+  width: 447px;
+  height: 245px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color-white);
+
+  &__info {
+    margin: 1rem 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+
+  &__logo {
+    width: 80px;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__number {
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-align: center;
+    letter-spacing: var(--spacing);
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 300;
+  }
+
+  &__footer-name {
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    font-size: var(--size-secondary);
+  }
 }
 
-.card-front__info {
-  margin: 1rem 1.7rem;
+.card-back {
+  background-image: url('./images/bg-card-back.png');
+  width: 447px;
+  height: 245px;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 5rem;
-}
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--color-white);
 
-.card-front__logo {
-  width: 80px;
-}
-
-.card-front__details {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  &__content {
+    padding-right: 4rem;
+  }
 }
