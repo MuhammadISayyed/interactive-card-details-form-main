@@ -3,6 +3,8 @@
   --color-gray: hsl(0, 0%, 85%);
   --color-violet-dark: hsl(278, 68%, 11%);
   --color-gray-light: hsl(270, 3%, 87%);
+  --color-first-gradient: hsl(249, 99%, 64%);
+  --color-second-gradient: hsl(278, 94%, 30%);
   --spacing: 3px;
   --size-secondary: 0.8rem;
 }
@@ -60,7 +62,7 @@ input::placeholder {
   width: 28rem;
   height: 15.5rem;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   color: var(--color-white);
   margin-left: 6rem;
 
@@ -107,7 +109,7 @@ input::placeholder {
   width: 28rem;
   height: 15.5rem;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -130,6 +132,7 @@ input::placeholder {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  color: var(--color-violet-dark);
   gap: 2rem;
   &__privacy {
     display: flex;
@@ -177,9 +180,10 @@ input::placeholder {
   text-decoration: none;
   border: none;
   width: 25rem;
-  height: 3rem;
+  height: 4rem;
   color: var(--color-white);
   background-color: var(--color-violet-dark);
+  border-radius: 0.3rem;
 }
 
 @media (max-width: 600px) {
@@ -189,7 +193,7 @@ input::placeholder {
   }
 
   .cards {
-    margin-top: 4rem;
+    margin-top: 2rem;
     gap: 0;
   }
 
@@ -201,11 +205,11 @@ input::placeholder {
 
   .card-front {
     // margin: 0;
-    margin-top: -3.7rem;
-    margin-left: 1.5rem;
-    width: 16rem;
+    margin-top: -4.7rem;
+    margin-left: 1rem;
+    width: 19rem;
     background-size: contain;
-    height: 8.5rem;
+    height: 10.5rem;
     order: 2;
 
     &__info {
@@ -233,17 +237,42 @@ input::placeholder {
 
   .card-back {
     // background-size: contain;
-    width: 16rem;
+    width: 19rem;
     background-size: contain;
     margin: 0;
     // height: fit-content;
-    height: 8.5rem;
+    height: 10.5rem;
     order: 1;
-    margin-left: 4rem;
+    margin-left: 3.5rem;
 
     &__content {
       font-size: 0.5rem;
       padding-right: 2.5rem;
     }
+  }
+
+  .card-form {
+    &__privacy {
+      gap: 1rem;
+    }
+    &__input {
+      &--primary {
+        width: 80vw;
+      }
+
+      &--secondary {
+        &--date {
+          width: 15vw;
+        }
+
+        &--cvc {
+          width: 31vw;
+        }
+      }
+    }
+  }
+
+  .submit {
+    width: 85vw;
   }
 }
