@@ -200,7 +200,7 @@ input:focus {
   border-radius: 0.3rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -215,15 +215,17 @@ input:focus {
     background-size: cover;
     height: 30vh;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .card-front {
     // margin: 0;
-    margin-top: -4.7rem;
+    margin-top: -4.2rem;
     margin-left: 1rem;
-    width: 19rem;
+    width: 17.5rem;
     background-size: contain;
-    height: 10.5rem;
+    height: 9.5rem;
     order: 2;
 
     &__info {
@@ -251,11 +253,11 @@ input:focus {
 
   .card-back {
     // background-size: contain;
-    width: 19rem;
+    width: 17.5rem;
     background-size: contain;
     margin: 0;
     // height: fit-content;
-    height: 10.5rem;
+    height: 9.5rem;
     order: 1;
     margin-left: 3.5rem;
 
@@ -280,13 +282,13 @@ input:focus {
         }
 
         &--cvc {
-          width: 31vw;
+          width: 40vw;
         }
       }
     }
   }
 
   .submit {
-    width: 85vw;
+    width: 82vw;
   }
 }
