@@ -83,7 +83,9 @@ input:focus {
   .card-front__number {
     font-weight: 400;
     font-size: 1.8rem;
-    letter-spacing: var(--spacing); }
+    letter-spacing: var(--spacing);
+    display: flex;
+    gap: 0.6rem; }
   .card-front__footer {
     display: flex;
     align-items: center;
@@ -141,12 +143,12 @@ input:focus {
     .card-form__input--secondary--date {
       width: 4rem; }
     .card-form__input--secondary--cvc {
-      width: 10rem; }
+      width: 13rem; }
 
 .submit {
   text-decoration: none;
   border: none;
-  width: 25rem;
+  width: 24rem;
   height: 4rem;
   color: var(--color-white);
   background-color: var(--color-violet-dark);

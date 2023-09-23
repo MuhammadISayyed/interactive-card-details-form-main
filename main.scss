@@ -103,6 +103,8 @@ input:focus {
     font-weight: 400;
     font-size: 1.8rem;
     letter-spacing: var(--spacing);
+    display: flex;
+    gap: 0.6rem;
   }
 
   &__footer {
@@ -184,7 +186,7 @@ input:focus {
       }
 
       &--cvc {
-        width: 10rem;
+        width: 13rem;
       }
     }
   }
@@ -193,7 +195,7 @@ input:focus {
 .submit {
   text-decoration: none;
   border: none;
-  width: 25rem;
+  width: 24rem;
   height: 4rem;
   color: var(--color-white);
   background-color: var(--color-violet-dark);
