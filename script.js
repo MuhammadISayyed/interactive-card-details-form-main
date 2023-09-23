@@ -13,6 +13,14 @@ const yearInput = document.getElementById('year-input');
 const cardCVC = document.getElementById('CVC');
 const CVCInput = document.getElementById('CVC-input');
 
+function isInputNumber(e) {
+  const char = String.fromCharCode(e.which);
+
+  if (!/[0-9]/.test(char)) {
+    e.preventDefault();
+  }
+}
+
 nameInput.addEventListener('keyup', () => {
   cardName.innerHTML = nameInput.value;
   if (cardName.innerHTML === '') {
@@ -42,6 +50,10 @@ monthInput.addEventListener('keyup', () => {
   cardMonth.innerHTML = monthInput.value;
   if (cardMonth.innerHTML === '') {
     cardMonth.innerHTML = '00';
+  }
+
+  if (cardMonth.innerHTML.toString() > 12) {
+    cardMonth.innerHTML = 'Not valid!';
   }
 });
 

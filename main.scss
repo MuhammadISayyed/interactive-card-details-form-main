@@ -200,6 +200,12 @@ input:focus {
   color: var(--color-white);
   background-color: var(--color-violet-dark);
   border-radius: 0.3rem;
+
+  &:hover {
+    background-color: var(--color-second-gradient);
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+  }
 }
 
 @media (max-width: 1024px) {

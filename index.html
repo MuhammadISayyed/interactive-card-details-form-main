@@ -46,6 +46,8 @@
         <label>
           cardholder name
           <input
+            required
+            maxlength="30"
             class="card-form__input card-form__input--primary"
             id="name-input"
             type="text"
@@ -55,9 +57,15 @@
         <label>
           Card Number
           <input
+            required
+            onkeypress="isInputNumber(event)"
             class="card-form__input card-form__input--primary"
             id="number-input"
             type="text"
+            autocomplete="off"
+            maxlength="16"
+            inputmode="numeric"
+            pattern="[0-9]*"
             placeholder="e.g. 1234 5678 9123 0000"
           />
         </label>
@@ -66,6 +74,8 @@
             <p class="card-form__date__header">Exp. Date (MM/YY)</p>
             <div class="card-form__date__fields">
               <input
+                required
+                onkeypress="isInputNumber(event)"
                 class="card-form__input card-form__input--secondary card-form__input--secondary--date"
                 autocomplete="off"
                 id="month-input"
@@ -77,6 +87,8 @@
                 data-pattern-validate
               />
               <input
+                required
+                onkeypress="isInputNumber(event)"
                 class="card-form__input card-form__input--secondary card-form__input--secondary--date"
                 autocomplete="off"
                 id="year-input"
@@ -92,6 +104,8 @@
           <label>
             CVC
             <input
+              required
+              onkeypress="isInputNumber(event)"
               class="card-form__input card-form__input--secondary card-form__input--secondary--cvc"
               autocomplete="off"
               id="CVC-input"
