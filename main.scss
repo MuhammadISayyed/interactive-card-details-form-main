@@ -209,6 +209,10 @@ input:focus {
 }
 
 @media (max-width: 1024px) {
+  input {
+    font-size: 0.8rem;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
