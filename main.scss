@@ -272,6 +272,7 @@ input:focus {
     height: 9.5rem;
     order: 1;
     margin-left: 3.5rem;
+    margin-top: 2rem;
 
     &__content {
       font-size: 0.5rem;
@@ -280,6 +281,7 @@ input:focus {
   }
 
   .card-form {
+    margin-top: 5rem;
     &__privacy {
       gap: 1rem;
     }
